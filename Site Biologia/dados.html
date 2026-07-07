@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dados e Pesquisa | Consumo Consciente Joinville</title>
+<meta name="description" content="Dados sobre Joinville, Santa Catarina e o Brasil relacionados a resíduos, reciclagem e consumo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo"><span class="leaf">🌱</span> Consumo Consciente JLE</a>
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="dicas.html">Dicas Práticas</a></li>
+        <li><a href="dados.html" class="ativo">Dados &amp; Pesquisa</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="calculadora.html">Calculadora</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Início</a> / Dados &amp; Pesquisa</div>
+    <h1>Dados sobre Joinville, SC e o Brasil</h1>
+    <p>Números que mostram por que o consumo consciente importa na nossa região.</p>
+  </div>
+</div>
+
+<main>
+
+  <section>
+    <div class="container">
+      <div class="section-titulo">
+        <span class="tag">Nossa cidade</span>
+        <h2>Joinville em números</h2>
+      </div>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="valor">616 mil</div>
+          <div class="rotulo">habitantes (Censo IBGE 2022) — maior cidade de Santa Catarina</div>
+        </div>
+        <div class="stat-card">
+          <div class="valor">1.128 km²</div>
+          <div class="rotulo">área territorial do município</div>
+        </div>
+        <div class="stat-card">
+          <div class="valor">3ª</div>
+          <div class="rotulo">cidade mais populosa da Região Sul do Brasil</div>
+        </div>
+      </div>
+      <p class="fonte-nota">Fonte: IBGE, Censo Demográfico 2022 (dados consultados via Wikipédia/IBGE Cidades).</p>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <div class="section-titulo">
+        <span class="tag">Panorama nacional</span>
+        <h2>Resíduos sólidos no Brasil</h2>
+        <p>Uma cidade grande como Joinville faz parte de um cenário nacional preocupante — mas também cheio de oportunidades de melhora.</p>
+      </div>
+
+      <div class="grafico-caixa">
+        <canvas id="grafico-residuos" height="110"></canvas>
+      </div>
+      <p class="fonte-nota">
+        Valores aproximados, com base em levantamentos amplamente divulgados sobre gestão de resíduos sólidos no Brasil
+        (referências como ABRELPE — Panorama dos Resíduos Sólidos no Brasil). Números variam por ano e por fonte; use-os
+        como ordem de grandeza para fins didáticos, não como dado oficial exato.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-titulo">
+        <span class="tag">O que isso significa</span>
+        <h2>Por que reduzir é mais importante que apenas reciclar</h2>
+      </div>
+      <table class="tabela-dados">
+        <thead>
+          <tr>
+            <th>Prática</th>
+            <th>Impacto ambiental</th>
+            <th>Facilidade de adoção</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Reduzir o consumo</td>
+            <td>Alto — evita extração de recursos e geração de lixo desde a origem</td>
+            <td>Média (exige planejamento e mudança de hábito)</td>
+          </tr>
+          <tr>
+            <td>Reutilizar materiais</td>
+            <td>Médio-alto — prolonga a vida útil de objetos e embalagens</td>
+            <td>Alta (pode ser feito em casa, sem custo)</td>
+          </tr>
+          <tr>
+            <td>Reparar em vez de trocar</td>
+            <td>Médio — evita descarte precoce de produtos duráveis</td>
+            <td>Média (depende de acesso a assistência técnica local)</td>
+          </tr>
+          <tr>
+            <td>Reciclar corretamente</td>
+            <td>Médio — recupera materiais, mas gasta energia no processo</td>
+            <td>Alta (com coleta seletiva disponível em Joinville)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <div class="cta-final">
+        <h2>Agora que você viu os números...</h2>
+        <p>Teste o que aprendeu no nosso quiz interativo sobre consumo consciente.</p>
+        <a href="quiz.html" class="btn btn-primario">Fazer o quiz</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="rodape-grid">
+      <div>
+        <h4>Consumo Consciente JLE</h4>
+        <p style="max-width:260px; font-size:0.88rem;">Trabalho da disciplina de Biologia — Ensino Médio — sobre consumo consciente e redução de desperdícios em Joinville-SC.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="objetivos.html">Objetivos</a></li>
+          <li><a href="dicas.html">Dicas Práticas</a></li>
+          <li><a href="dados.html">Dados &amp; Pesquisa</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Interativo</h4>
+        <ul>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="calculadora.html">Calculadora de Impacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape-linha">Trabalho escolar sem fins comerciais · Joinville-SC · 2026</div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    var ctx = document.getElementById('grafico-residuos');
+    if (ctx && window.Chart) {
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Resíduos gerados', 'Resíduos coletados', 'Materiais efetivamente reciclados'],
+          datasets: [{
+            label: 'Proporção aproximada (%)',
+            data: [100, 92, 4],
+            backgroundColor: ['#1b4332', '#2d6a4f', '#52b788'],
+            borderRadius: 8
+          }]
+        },
+        options: {
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: true, max: 100, ticks: { callback: function (v) { return v + '%'; } } }
+          }
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>

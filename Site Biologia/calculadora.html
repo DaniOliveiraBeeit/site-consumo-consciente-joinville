@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Impacto | Consumo Consciente Joinville</title>
+<meta name="description" content="Simule quanto papel e plástico você pode economizar por mês adotando hábitos de consumo consciente.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo"><span class="leaf">🌱</span> Consumo Consciente JLE</a>
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="dicas.html">Dicas Práticas</a></li>
+        <li><a href="dados.html">Dados &amp; Pesquisa</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="calculadora.html" class="ativo">Calculadora</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Início</a> / Calculadora de Impacto</div>
+    <h1>Calculadora de Impacto</h1>
+    <p>Mova os controles e veja uma estimativa do que você pode economizar por mês.</p>
+  </div>
+</div>
+
+<main>
+  <section>
+    <div class="container">
+      <div class="calc-caixa" id="calc-app">
+        <div class="calc-campo">
+          <label for="slider-papel">Folhas de papel evitadas por mês <span class="valor-atual" id="valor-papel">0</span></label>
+          <input type="range" id="slider-papel" min="0" max="500" step="10" value="100">
+          <div class="ajuda">Ex.: imprimir dos dois lados, usar rascunho, digitalizar em vez de imprimir.</div>
+        </div>
+
+        <div class="calc-campo">
+          <label for="slider-sacolas">Sacolas plásticas evitadas por mês <span class="valor-atual" id="valor-sacolas">0</span></label>
+          <input type="range" id="slider-sacolas" min="0" max="60" step="1" value="10">
+          <div class="ajuda">Ex.: levar sacola retornável ao mercado ou à feira.</div>
+        </div>
+
+        <div class="calc-campo">
+          <label for="slider-copos">Copos/talheres descartáveis evitados por mês <span class="valor-atual" id="valor-copos">0</span></label>
+          <input type="range" id="slider-copos" min="0" max="100" step="5" value="20">
+          <div class="ajuda">Ex.: usar copo e talher reutilizáveis na escola ou no trabalho.</div>
+        </div>
+
+        <div class="calc-resultado">
+          <div class="grid grid-3">
+            <div>
+              <div class="valor" id="res-mes">0 kg</div>
+              <div class="rotulo">economizados por mês</div>
+            </div>
+            <div>
+              <div class="valor" id="res-ano">0 kg</div>
+              <div class="rotulo">economizados por ano</div>
+            </div>
+            <div>
+              <div class="valor" id="res-arvores">0</div>
+              <div class="rotulo">árvores preservadas por ano*</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="fonte-nota">*Estimativas simplificadas e aproximadas, com finalidade didática — não representam medições
+        científicas exatas. O objetivo é ilustrar como pequenos hábitos, somados ao longo do tempo, geram impacto real.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <div class="cta-final">
+        <h2>Gostou do resultado?</h2>
+        <p>Compartilhe esse hábito com pelo menos 3 pessoas — família, amigos ou colegas de turma.</p>
+        <a href="dicas.html" class="btn btn-primario">Ver mais dicas práticas</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="rodape-grid">
+      <div>
+        <h4>Consumo Consciente JLE</h4>
+        <p style="max-width:260px; font-size:0.88rem;">Trabalho da disciplina de Biologia — Ensino Médio — sobre consumo consciente e redução de desperdícios em Joinville-SC.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="objetivos.html">Objetivos</a></li>
+          <li><a href="dicas.html">Dicas Práticas</a></li>
+          <li><a href="dados.html">Dados &amp; Pesquisa</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Interativo</h4>
+        <ul>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="calculadora.html">Calculadora de Impacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape-linha">Trabalho escolar sem fins comerciais · Joinville-SC · 2026</div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
