@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consumo Consciente Joinville | Trabalho de Biologia</title>
+<meta name="description" content="Site educativo sobre consumo consciente, criado para trabalho de Biologia do Ensino Médio em Joinville-SC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   Consumo Consciente Joinville - folha de estilos principal
+   ========================================================= */
+
+:root {
+  --verde-escuro: #1b4332;
+  --verde-medio: #2d6a4f;
+  --verde-claro: #52b788;
+  --verde-suave: #d8f3dc;
+  --terra: #a9744f;
+  --creme: #fefae0;
+  --areia: #f6f3ea;
+  --cinza-texto: #3a3a3a;
+  --branco: #ffffff;
+  --alerta: #e07a5f;
+  --sombra: 0 8px 24px rgba(27, 67, 50, 0.12);
+  --raio: 16px;
+  --fonte-titulo: 'Poppins', 'Segoe UI', sans-serif;
+  --fonte-texto: 'Inter', 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-texto);
+  color: var(--cinza-texto);
+  background: var(--areia);
+  line-height: 1.65;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--fonte-titulo);
+  color: var(--verde-escuro);
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header / Navegação ---------- */
+
+header.site-header {
+  background: var(--verde-escuro);
+  color: var(--branco);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--sombra);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.logo .leaf {
+  font-size: 1.4rem;
+}
+
+nav.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
+
+nav.main-nav a {
+  text-decoration: none;
+  color: var(--verde-suave);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+nav.main-nav a:hover,
+nav.main-nav a.ativo {
+  background: var(--verde-claro);
+  color: var(--verde-escuro);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--branco);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+@media (max-width: 780px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav.main-nav {
+    display: none;
+    width: 100%;
+    order: 3;
+  }
+  nav.main-nav.aberto {
+    display: block;
+  }
+  nav.main-nav ul {
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 0 16px;
+  }
+  .nav-wrap {
+    flex-wrap: wrap;
+  }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  background: linear-gradient(135deg, var(--verde-escuro), var(--verde-medio));
+  color: var(--branco);
+  padding: 72px 0 88px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: -80px;
+  width: 280px;
+  height: 280px;
+  background: var(--verde-claro);
+  opacity: 0.18;
+  border-radius: 50%;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  display: inline-block;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: var(--verde-suave);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  color: var(--branco);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  max-width: 720px;
+  margin-bottom: 18px;
+}
+
+.hero p.lead {
+  font-size: 1.15rem;
+  max-width: 640px;
+  color: var(--verde-suave);
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Botões ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.98rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+  font-family: var(--fonte-texto);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primario {
+  background: var(--verde-claro);
+  color: var(--verde-escuro);
+}
+
+.btn-primario:hover {
+  background: var(--creme);
+  box-shadow: var(--sombra);
+}
+
+.btn-secundario {
+  border-color: rgba(255,255,255,0.6);
+  color: var(--branco);
+}
+
+.btn-secundario:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.btn-outline {
+  border-color: var(--verde-medio);
+  color: var(--verde-medio);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--verde-suave);
+}
+
+/* ---------- Seções gerais ---------- */
+
+main {
+  min-height: 60vh;
+}
+
+section {
+  padding: 64px 0;
+}
+
+section.alt {
+  background: var(--branco);
+}
+
+.section-titulo {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 44px;
+}
+
+.section-titulo .tag {
+  display: inline-block;
+  color: var(--verde-medio);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-titulo h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+
+.section-titulo p {
+  color: #5b6b60;
+}
+
+/* ---------- Cards / Grid ---------- */
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 860px) {
+  .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--branco);
+  border-radius: var(--raio);
+  padding: 28px;
+  box-shadow: var(--sombra);
+  border: 1px solid rgba(45,106,79,0.08);
+}
+
+.card .icone {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #5b6b60;
+  font-size: 0.96rem;
+  margin: 0;
+}
+
+.card.destaque {
+  background: var(--verde-escuro);
+  color: var(--branco);
+}
+.card.destaque h3, .card.destaque p {
+  color: var(--branco);
+}
+
+/* ---------- Storytelling ---------- */
+
+.historia {
+  background: var(--branco);
+  border-radius: 24px;
+  box-shadow: var(--sombra);
+  padding: 44px;
+  margin-top: -56px;
+  position: relative;
+  z-index: 2;
+}
+
+.historia .aspas {
+  font-size: 3rem;
+  color: var(--verde-claro);
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.historia p {
+  font-size: 1.08rem;
+  color: #3d4a42;
+}
+
+.historia .assinatura {
+  margin-top: 20px;
+  font-weight: 700;
+  color: var(--verde-medio);
+}
+
+.problema-lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+@media (max-width: 700px) {
+  .problema-lista { grid-template-columns: 1fr; }
+  .historia { padding: 26px; }
+}
+
+.problema-item {
+  background: var(--verde-suave);
+  border-radius: var(--raio);
+  padding: 22px;
+  text-align: center;
+}
+
+.problema-item .num {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--verde-escuro);
+}
+
+/* ---------- Listas com check ---------- */
+
+ul.check-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.check-lista li {
+  padding: 10px 0 10px 34px;
+  position: relative;
+  border-bottom: 1px dashed rgba(45,106,79,0.18);
+}
+
+ul.check-lista li:last-child {
+  border-bottom: none;
+}
+
+ul.check-lista li::before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+  top: 9px;
+}
+
+/* ---------- Tabelas de dados ---------- */
+
+.tabela-dados {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--branco);
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+.tabela-dados th, .tabela-dados td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--verde-suave);
+  font-size: 0.95rem;
+}
+
+.tabela-dados th {
+  background: var(--verde-escuro);
+  color: var(--branco);
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+}
+
+.tabela-dados tr:last-child td {
+  border-bottom: none;
+}
+
+.fonte-nota {
+  font-size: 0.82rem;
+  color: #7a8a80;
+  margin-top: 12px;
+}
+
+.grafico-caixa {
+  background: var(--branco);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 28px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 700px) {
+  .stat-grid { grid-template-columns: 1fr; }
+}
+
+.stat-card {
+  text-align: center;
+  background: var(--verde-escuro);
+  color: var(--branco);
+  border-radius: var(--raio);
+  padding: 28px 16px;
+}
+
+.stat-card .valor {
+  font-family: var(--fonte-titulo);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--verde-claro);
+}
+
+.stat-card .rotulo {
+  font-size: 0.9rem;
+  color: var(--verde-suave);
+  margin-top: 6px;
+}
+
+/* ---------- Quiz ---------- */
+
+.quiz-caixa {
+  background: var(--branco);
+  border-radius: 24px;
+  box-shadow: var(--sombra);
+  padding: 36px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.quiz-progresso {
+  height: 8px;
+  background: var(--verde-suave);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 26px;
+}
+
+.quiz-progresso-barra {
+  height: 100%;
+  background: var(--verde-claro);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.quiz-pergunta {
+  font-size: 1.2rem;
+  margin-bottom: 22px;
+}
+
+.quiz-opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quiz-opcao {
+  text-align: left;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 2px solid var(--verde-suave);
+  background: var(--areia);
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: var(--fonte-texto);
+  transition: all 0.15s ease;
+}
+
+.quiz-opcao:hover {
+  border-color: var(--verde-claro);
+}
+
+.quiz-opcao.correta {
+  background: var(--verde-suave);
+  border-color: var(--verde-medio);
+}
+
+.quiz-opcao.incorreta {
+  background: #fbe3dc;
+  border-color: var(--alerta);
+}
+
+.quiz-opcao[disabled] {
+  cursor: default;
+}
+
+.quiz-feedback {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  min-height: 24px;
+  color: var(--verde-medio);
+  font-weight: 600;
+}
+
+.quiz-resultado {
+  text-align: center;
+}
+
+.quiz-resultado .valor {
+  font-family: var(--fonte-titulo);
+  font-size: 3rem;
+  color: var(--verde-medio);
+  font-weight: 700;
+}
+
+/* ---------- Calculadora ---------- */
+
+.calc-caixa {
+  background: var(--branco);
+  border-radius: 24px;
+  box-shadow: var(--sombra);
+  padding: 36px;
+}
+
+.calc-campo {
+  margin-bottom: 22px;
+}
+
+.calc-campo label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: var(--verde-escuro);
+  margin-bottom: 8px;
+  font-size: 0.98rem;
+}
+
+.calc-campo label span.valor-atual {
+  color: var(--verde-medio);
+  font-weight: 700;
+}
+
+.calc-campo input[type="range"] {
+  width: 100%;
+  accent-color: var(--verde-medio);
+}
+
+.calc-campo .ajuda {
+  font-size: 0.82rem;
+  color: #7a8a80;
+  margin-top: 4px;
+}
+
+.calc-resultado {
+  background: var(--verde-suave);
+  border-radius: var(--raio);
+  padding: 28px;
+  margin-top: 30px;
+}
+
+.calc-resultado .grid-3 {
+  text-align: center;
+}
+
+.calc-resultado .valor {
+  font-family: var(--fonte-titulo);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--verde-escuro);
+}
+
+.calc-resultado .rotulo {
+  font-size: 0.85rem;
+  color: #3d4a42;
+}
+
+/* ---------- CTA final ---------- */
+
+.cta-final {
+  background: linear-gradient(135deg, var(--verde-medio), var(--verde-escuro));
+  color: var(--branco);
+  text-align: center;
+  border-radius: 24px;
+  padding: 52px 32px;
+}
+
+.cta-final h2 {
+  color: var(--branco);
+}
+
+.cta-final p {
+  color: var(--verde-suave);
+  max-width: 560px;
+  margin: 0 auto 26px;
+}
+
+/* ---------- Footer ---------- */
+
+footer.site-footer {
+  background: var(--verde-escuro);
+  color: var(--verde-suave);
+  padding: 40px 0 24px;
+  margin-top: 40px;
+}
+
+footer.site-footer .rodape-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+footer.site-footer h4 {
+  color: var(--branco);
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+footer.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer.site-footer a {
+  text-decoration: none;
+  color: var(--verde-suave);
+  font-size: 0.92rem;
+  line-height: 2;
+}
+
+footer.site-footer a:hover {
+  color: var(--branco);
+}
+
+.rodape-linha {
+  border-top: 1px solid rgba(255,255,255,0.14);
+  padding-top: 18px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: rgba(216,243,220,0.7);
+}
+
+/* ---------- Página interna genérica (título) ---------- */
+
+.page-hero {
+  background: var(--verde-escuro);
+  color: var(--branco);
+  padding: 52px 0;
+  text-align: center;
+}
+
+.page-hero h1 {
+  color: var(--branco);
+  margin-bottom: 8px;
+}
+
+.page-hero p {
+  color: var(--verde-suave);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--verde-suave);
+  margin-bottom: 14px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: var(--verde-suave);
+  opacity: 0.85;
+}
+
+/* ---------- Acordeão (dicas) ---------- */
+
+.acordeao-item {
+  background: var(--branco);
+  border-radius: 14px;
+  box-shadow: var(--sombra);
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.acordeao-cabeca {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  font-family: var(--fonte-titulo);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--verde-escuro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.acordeao-cabeca .sinal {
+  font-size: 1.3rem;
+  color: var(--verde-claro);
+  transition: transform 0.2s ease;
+}
+
+.acordeao-item.aberto .sinal {
+  transform: rotate(45deg);
+}
+
+.acordeao-corpo {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 24px;
+}
+
+.acordeao-item.aberto .acordeao-corpo {
+  max-height: 500px;
+  padding-bottom: 22px;
+}
+
+.acordeao-corpo ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #4a5a50;
+}
+
+.acordeao-corpo ul li {
+  margin-bottom: 8px;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--verde-suave);
+  color: var(--verde-escuro);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo"><span class="leaf">🌱</span> Consumo Consciente JLE</a>
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="ativo">Início</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="dicas.html">Dicas Práticas</a></li>
+        <li><a href="dados.html">Dados &amp; Pesquisa</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="calculadora.html">Calculadora</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Trabalho de Biologia · Ensino Médio · Joinville-SC</span>
+      <h1>Pequenas escolhas, grande impacto: consumo consciente para um futuro mais leve.</h1>
+      <p class="lead">Um site criado por estudantes para ensinar, inspirar e guiar a comunidade de Joinville a reduzir desperdícios, reaproveitar recursos e cuidar do planeta no dia a dia.</p>
+      <div class="hero-buttons">
+        <a href="#historia" class="btn btn-primario">Conhecer a história</a>
+        <a href="dicas.html" class="btn btn-secundario">Ver dicas práticas</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="historia" id="historia">
+      <span class="badge">Storytelling</span>
+      <div class="aspas">"</div>
+      <p>Na comunidade do Senac e nas ruas de Joinville, temos a <strong>Ana</strong>, que trabalha com coleta e separação de resíduos. Ela percebeu que muita gente compra produtos sem necessidade, usa embalagens descartáveis e descarta materiais que ainda poderiam ser reutilizados ou reciclados.</p>
+      <p>Sempre que conversa com alunos, moradores ou comerciantes, ouve que querem fazer a diferença, mas não sabem por onde começar: não sabem escolher produtos com menos impacto, não sabem como descartar corretamente e acham que pequenas ações não mudam nada.</p>
+      <p>O resultado? Mais lixo acumulado, recursos naturais desperdiçados e um futuro que fica cada vez mais frágil — e isso é um problema que toca a todos nós.</p>
+      <p class="assinatura">— A história de Ana, coletora em Joinville-SC</p>
+
+      <div class="problema-lista">
+        <div class="problema-item">
+          <div class="num">🛍️</div>
+          <p>Compras por impulso, sem real necessidade</p>
+        </div>
+        <div class="problema-item">
+          <div class="num">🚮</div>
+          <p>Descarte incorreto de materiais recicláveis</p>
+        </div>
+        <div class="problema-item">
+          <div class="num">🌎</div>
+          <p>Recursos naturais desperdiçados todos os dias</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="section-titulo">
+        <span class="tag">Por que este site existe</span>
+        <h2>Transformar a história da Ana em ação coletiva</h2>
+        <p>Assim como ela, muita gente em Joinville quer mudar, mas falta informação prática e acessível. Este site reúne o que você precisa para começar hoje.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <span class="icone">🎯</span>
+          <h3>Objetivo claro</h3>
+          <p>Conheça o objetivo geral e específico do projeto e o que esperamos alcançar com ele.</p>
+        </div>
+        <div class="card">
+          <span class="icone">💡</span>
+          <h3>Dicas práticas</h3>
+          <p>Hábitos simples de reduzir, reutilizar e reciclar, adaptados à realidade de Joinville e SC.</p>
+        </div>
+        <div class="card">
+          <span class="icone">📊</span>
+          <h3>Dados reais</h3>
+          <p>Números sobre resíduos e reciclagem em Joinville, Santa Catarina e no Brasil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <div class="section-titulo">
+        <span class="tag">Interatividade</span>
+        <h2>Aprenda testando o que já sabe</h2>
+        <p>Coloque seus conhecimentos à prova e descubra o impacto real das suas escolhas.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card destaque">
+          <span class="icone">🧠</span>
+          <h3>Quiz do Consumo Consciente</h3>
+          <p>Responda 6 perguntas rápidas e veja o quanto você já sabe sobre reduzir, reutilizar e reciclar.</p>
+          <br>
+          <a href="quiz.html" class="btn btn-primario">Fazer o quiz</a>
+        </div>
+        <div class="card destaque">
+          <span class="icone">🧮</span>
+          <h3>Calculadora de Impacto</h3>
+          <p>Simule quanto papel e plástico você pode economizar por mês com pequenas mudanças de hábito.</p>
+          <br>
+          <a href="calculadora.html" class="btn btn-primario">Calcular impacto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-final">
+        <h2>Vamos começar pelo menos com 3 hábitos novos?</h2>
+        <p>Explore as dicas práticas, entenda os dados da nossa região e descubra como pequenas escolhas de consumo fazem uma grande diferença para Joinville e para o planeta.</p>
+        <a href="dicas.html" class="btn btn-primario">Ver dicas práticas</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="rodape-grid">
+      <div>
+        <h4>Consumo Consciente JLE</h4>
+        <p style="max-width:260px; font-size:0.88rem;">Trabalho da disciplina de Biologia — Ensino Médio — sobre consumo consciente e redução de desperdícios em Joinville-SC.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="objetivos.html">Objetivos</a></li>
+          <li><a href="dicas.html">Dicas Práticas</a></li>
+          <li><a href="dados.html">Dados &amp; Pesquisa</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Interativo</h4>
+        <ul>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="calculadora.html">Calculadora de Impacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape-linha">Trabalho escolar sem fins comerciais · Joinville-SC · 2026</div>
+  </div>
+</footer>
+
+<script>
+// =========================================================
+// Consumo Consciente Joinville - script principal
+// =========================================================
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  /* ---------- Menu mobile ---------- */
+  var toggle = document.querySelector('.menu-toggle');
+  var nav = document.querySelector('nav.main-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      nav.classList.toggle('aberto');
+    });
+  }
+
+  /* ---------- Acordeão (dicas.html) ---------- */
+  var cabecas = document.querySelectorAll('.acordeao-cabeca');
+  cabecas.forEach(function (cabeca) {
+    cabeca.addEventListener('click', function () {
+      var item = cabeca.closest('.acordeao-item');
+      item.classList.toggle('aberto');
+    });
+  });
+
+  /* ---------- Quiz (quiz.html) ---------- */
+  var quizEl = document.getElementById('quiz-app');
+  if (quizEl) {
+    iniciarQuiz(quizEl);
+  }
+
+  /* ---------- Calculadora (calculadora.html) ---------- */
+  var calcEl = document.getElementById('calc-app');
+  if (calcEl) {
+    iniciarCalculadora(calcEl);
+  }
+});
+
+/* =========================================================
+   QUIZ
+   ========================================================= */
+
+function iniciarQuiz(root) {
+  var perguntas = [
+    {
+      pergunta: "Qual dessas atitudes representa melhor o 'consumo consciente'?",
+      opcoes: [
+        "Comprar sempre que houver promoção, mesmo sem necessidade",
+        "Pensar se realmente precisa do produto antes de comprar",
+        "Trocar de celular a cada seis meses",
+        "Usar sacola plástica nova em cada compra"
+      ],
+      correta: 1,
+      explicacao: "Consumo consciente começa por perguntar: eu preciso mesmo disso?"
+    },
+    {
+      pergunta: "O que significa a ordem dos '3 Rs' da sustentabilidade?",
+      opcoes: [
+        "Reciclar, Reciclar, Reciclar",
+        "Repor, Remover, Reaproveitar",
+        "Reduzir, Reutilizar, Reciclar",
+        "Reformar, Reduzir, Repassar"
+      ],
+      correta: 2,
+      explicacao: "Reduzir o consumo vem antes de reutilizar; reciclar é o último recurso."
+    },
+    {
+      pergunta: "Por que reduzir o consumo é mais eficaz do que apenas reciclar?",
+      opcoes: [
+        "Porque reciclagem não funciona no Brasil",
+        "Porque reduzir evita gastar recursos naturais e energia na produção",
+        "Porque reciclar é proibido em Santa Catarina",
+        "Não há diferença entre as duas opções"
+      ],
+      correta: 1,
+      explicacao: "Reduzir evita que o recurso precise ser extraído e processado desde o início."
+    },
+    {
+      pergunta: "Qual é uma forma simples de reutilizar materiais no dia a dia?",
+      opcoes: [
+        "Jogar potes de vidro no lixo comum",
+        "Usar folhas de caderno só de um lado e descartar",
+        "Usar potes de vidro e caixas como organizadores ou vasos",
+        "Comprar embalagens descartáveis para guardar comida"
+      ],
+      correta: 2,
+      explicacao: "Potes, caixas e vidros podem ganhar uma segunda vida em casa."
+    },
+    {
+      pergunta: "Na coleta seletiva, papel sujo de gordura (como caixa de pizza) deve ir para:",
+      opcoes: [
+        "Lixo reciclável (papel)",
+        "Lixo comum/orgânico, pois contamina a reciclagem",
+        "Deve ser lavado e reciclado normalmente",
+        "Qualquer lixeira, tanto faz"
+      ],
+      correta: 1,
+      explicacao: "Papel engordurado contamina o processo de reciclagem e deve ir para o lixo comum."
+    },
+    {
+      pergunta: "Qual atitude ajuda a evitar o desperdício de recursos e dinheiro ao mesmo tempo?",
+      opcoes: [
+        "Planejar as compras e evitar excessos",
+        "Comprar em grande quantidade mesmo sem necessidade",
+        "Trocar produtos que ainda funcionam por modelos novos",
+        "Ignorar a validade dos alimentos"
+      ],
+      correta: 0,
+      explicacao: "Planejar compras reduz desperdício de alimentos, dinheiro e embalagens."
+    }
+  ];
+
+  var indice = 0;
+  var acertos = 0;
+  var respondida = false;
+
+  root.innerHTML =
+    '<div class="quiz-progresso"><div class="quiz-progresso-barra" id="quiz-barra"></div></div>' +
+    '<div id="quiz-corpo"></div>';
+
+  var corpo = root.querySelector('#quiz-corpo');
+  var barra = root.querySelector('#quiz-barra');
+
+  function renderPergunta() {
+    respondida = false;
+    var p = perguntas[indice];
+    barra.style.width = ((indice) / perguntas.length * 100) + '%';
+
+    var html = '<div class="badge">Pergunta ' + (indice + 1) + ' de ' + perguntas.length + '</div>';
+    html += '<div class="quiz-pergunta">' + p.pergunta + '</div>';
+    html += '<div class="quiz-opcoes">';
+    p.opcoes.forEach(function (opcao, i) {
+      html += '<button class="quiz-opcao" data-i="' + i + '">' + opcao + '</button>';
+    });
+    html += '</div><div class="quiz-feedback" id="quiz-feedback"></div>';
+    html += '<div style="text-align:right; margin-top:18px;"><button class="btn btn-primario" id="quiz-avancar" disabled>' +
+      (indice === perguntas.length - 1 ? 'Ver resultado' : 'Próxima pergunta') + '</button></div>';
+
+    corpo.innerHTML = html;
+
+    var botoes = corpo.querySelectorAll('.quiz-opcao');
+    var feedback = corpo.querySelector('#quiz-feedback');
+    var avancar = corpo.querySelector('#quiz-avancar');
+
+    botoes.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (respondida) return;
+        respondida = true;
+        var i = parseInt(btn.getAttribute('data-i'), 10);
+        botoes.forEach(function (b) { b.setAttribute('disabled', 'true'); });
+
+        if (i === p.correta) {
+          btn.classList.add('correta');
+          acertos++;
+          feedback.textContent = '✅ Certo! ' + p.explicacao;
+        } else {
+          btn.classList.add('incorreta');
+          botoes[p.correta].classList.add('correta');
+          feedback.textContent = '❌ Quase! ' + p.explicacao;
+        }
+        avancar.removeAttribute('disabled');
+      });
+    });
+
+    avancar.addEventListener('click', function () {
+      if (indice < perguntas.length - 1) {
+        indice++;
+        renderPergunta();
+      } else {
+        renderResultado();
+      }
+    });
+  }
+
+  function renderResultado() {
+    barra.style.width = '100%';
+    var pct = Math.round((acertos / perguntas.length) * 100);
+    var mensagem;
+    if (pct >= 80) {
+      mensagem = 'Excelente! Você já pensa como um consumidor consciente. 🌱';
+    } else if (pct >= 50) {
+      mensagem = 'Bom começo! Ainda dá para aprimorar alguns hábitos. ♻️';
+    } else {
+      mensagem = 'Vale a pena revisitar a página de Dicas para aprender mais. 📖';
+    }
+
+    corpo.innerHTML =
+      '<div class="quiz-resultado">' +
+      '<div class="badge">Resultado</div>' +
+      '<div class="valor">' + acertos + '/' + perguntas.length + '</div>' +
+      '<p style="font-size:1.05rem; margin: 10px 0 26px;">' + mensagem + '</p>' +
+      '<button class="btn btn-outline" id="quiz-refazer">Refazer o quiz</button>' +
+      '</div>';
+
+    corpo.querySelector('#quiz-refazer').addEventListener('click', function () {
+      indice = 0;
+      acertos = 0;
+      renderPergunta();
+    });
+  }
+
+  renderPergunta();
+}
+
+/* =========================================================
+   CALCULADORA DE IMPACTO
+   ========================================================= */
+
+function iniciarCalculadora(root) {
+  // Estimativas educativas simplificadas (valores aproximados para fins didáticos)
+  var FATORES = {
+    papel: { porUnidade: 0.005, unidade: 'kg de papel/mês' },     // folhas de papel por mês -> kg
+    sacolas: { porUnidade: 0.008, unidade: 'kg de plástico/mês' }, // sacolas plásticas por mês -> kg
+    copos: { porUnidade: 0.003, unidade: 'kg de plástico/mês' }    // copos descartáveis por mês -> kg
+  };
+
+  function calcular(folhas, sacolas, copos) {
+    var kgPapelEvitado = folhas * FATORES.papel.porUnidade;
+    var kgPlasticoEvitado = (sacolas * FATORES.sacolas.porUnidade) + (copos * FATORES.copos.porUnidade);
+    var kgTotalMes = kgPapelEvitado + kgPlasticoEvitado;
+    var kgTotalAno = kgTotalMes * 12;
+    // 1 árvore adulta ~ referência didática: cada ~24kg de papel reciclado representa
+    // uma fração do consumo evitado de celulose (valor aproximado para fins educativos)
+    var arvoresPreservadas = kgPapelEvitado > 0 ? (kgPapelEvitado * 12) / 24 : 0;
+
+    return {
+      kgTotalMes: kgTotalMes,
+      kgTotalAno: kgTotalAno,
+      arvoresPreservadas: arvoresPreservadas
+    };
+  }
+
+  function atualizar() {
+    var folhas = parseInt(root.querySelector('#slider-papel').value, 10);
+    var sacolas = parseInt(root.querySelector('#slider-sacolas').value, 10);
+    var copos = parseInt(root.querySelector('#slider-copos').value, 10);
+
+    root.querySelector('#valor-papel').textContent = folhas;
+    root.querySelector('#valor-sacolas').textContent = sacolas;
+    root.querySelector('#valor-copos').textContent = copos;
+
+    var r = calcular(folhas, sacolas, copos);
+
+    root.querySelector('#res-mes').textContent = r.kgTotalMes.toFixed(1) + ' kg';
+    root.querySelector('#res-ano').textContent = r.kgTotalAno.toFixed(1) + ' kg';
+    root.querySelector('#res-arvores').textContent = r.arvoresPreservadas.toFixed(2);
+  }
+
+  ['slider-papel', 'slider-sacolas', 'slider-copos'].forEach(function (id) {
+    var el = root.querySelector('#' + id);
+    if (el) el.addEventListener('input', atualizar);
+  });
+
+  atualizar();
+}
+
+</script>
+</body>
+</html>
